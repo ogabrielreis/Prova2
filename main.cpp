@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  int tamanhoPalavra;
+  int tamanhoPalavra, trocasEfetuadas = 0;
   char trocarLetra, letraNova;
   string palavra, palavraSemModificar;
   string *palavraAux;
@@ -23,10 +23,11 @@ int main() {
   for (int i = 0; i < tamanhoPalavra; i++) {
     if (palavra[i] == trocarLetra) {
       palavra[i] = letraNova;
+      trocasEfetuadas++;
     }
   }
 
   cout << "A nova palavra é: " << palavra << endl;
   cout << "A palavra original é: " << palavraSemModificar << endl;
-  cout << "E contém " << tamanhoPalavra << " letras";
+  cout << "E fez " << trocasEfetuadas << " trocas";
 }
